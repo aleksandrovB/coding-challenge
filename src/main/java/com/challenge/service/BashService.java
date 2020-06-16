@@ -13,7 +13,7 @@ public class BashService {
      * @return bash script string
      */
     public String generateBashScript(Queue<OutgoingTask> tasks) {
-        StringBuilder script = new StringBuilder();
+        StringBuilder script = new StringBuilder("#!/usr/bin/env bash\n");
 
         for (OutgoingTask t : tasks) {
             script.append(t.getCommand()).append("\n");
